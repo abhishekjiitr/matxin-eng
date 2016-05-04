@@ -1,4 +1,4 @@
-//package matxin;
+package matxin;
 
 import java.io.*;
 import java.util.*;
