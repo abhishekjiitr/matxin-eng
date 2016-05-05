@@ -20,7 +20,7 @@ AM_INIT_AUTOMAKE
 
 
 m4_define([required_lttoolbox_version], [3.2.0])
-m4_define([required_matxin_version], [1.5.0])
+m4_define([required_matxin_version], [1.4.0])
 
 AC_PATH_PROG(BASH, bash, no)
 if test x$ac_cv_path_BASH = x
@@ -45,6 +45,10 @@ fi
 
 AX_PROG_JAVAC
 AX_PROG_JAVA
+
+PKG_CHECK_MODULES(MATXIN, [dnl
+ lttoolbox >= required_lttoolbox_version dnl
+ matxin >= required_matxin_version], CPPFLAGS="$CPPFLAGS $MATXIN_CPPFLAGS $MATXIN_CFLAGS"; LIBS="$LIBS")
 
 
 
