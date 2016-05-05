@@ -5,6 +5,8 @@ AC_PREREQ(2.59)
 AC_INIT([matxin-eng], [1.5.0])
 PACKAGE=matxin-eng
 
+AC_CONFIG_MACRO_DIRS([m4])
+
 GENERIC_MAJOR_VERSION=1
 GENERIC_MINOR_VERSION=5
 GENERIC_MICRO_VERSION=0
@@ -14,12 +16,33 @@ GENERIC_RELEASE=$GENERIC_MAJOR_VERSION.$GENERIC_MINOR_VERSION.$GENERIC_MICRO_VER
 AC_SUBST(GENERIC_RELEASE)
 AC_SUBST(GENERIC_VERSION)
 
+AM_INIT_AUTOMAKE
+
 
 m4_define([required_lttoolbox_version], [3.2.0])
-m4_define([required_matxin_version], [1.4.0])
+m4_define([required_matxin_version], [1.5.0])
+
+AC_PATH_PROG(BASH, bash, no)
+if test x$ac_cv_path_BASH = x
+then
+  AC_MSG_ERROR([bash not found. You may want to adjust your PATH.])
+fi
+if test x$ac_cv_path_BASH = xno
+then
+  AC_MSG_ERROR([bash not found. You may want to adjust your PATH.])
+fi
+
+AX_PROG_JAVAC
+AX_PROG_JAVA
+
+
+
+AP_MKINCLUDE
 
 AC_CONFIG_FILES([
                  Makefile
+                 stanford/Makefile
+                 stanford/matxin/Makefile
 		 matxin-eng.pc
 		])
 
