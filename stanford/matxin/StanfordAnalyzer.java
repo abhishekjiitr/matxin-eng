@@ -173,9 +173,9 @@ class StanfordAnalyzer {
 	String s;
 
 	System.out.println("<?xml version='1.0' encoding='UTF-8' ?>");
-	if (!props.containsKey("noXSLT")) {
-	    System.out.println("<?xml-stylesheet type='text/xsl' href='profit.xsl'?>");
-	}
+//	if (!props.containsKey("noXSLT")) {
+//	    System.out.println("<?xml-stylesheet type='text/xsl' href='profit.xsl'?>");
+//	}
 	int sent_count=1;
 	System.out.println("<corpus>");
 
