@@ -32,6 +32,17 @@ then
   AC_MSG_ERROR([bash not found. You may want to adjust your PATH.])
 fi
 
+AC_CHECK_FILE(stanford/matxin/stanford-corenlp-2012-04-09.jar, HAS_CORENLP=1, HAS_CORENLP=0)
+AC_CHECK_FILE(stanford/matxin/stanford-corenlp-2012-04-09-models.jar, HAS_CORENLP=1, HAS_CORENLP=0)
+
+if test $HAS_CORENLP = 0
+then
+  AC_MSG_ERROR([You have not got stanford-corenlp-2012-04-09.jar.
+                Try running: scripts/download-corenlp.sh
+               ])
+  
+fi
+
 AX_PROG_JAVAC
 AX_PROG_JAVA
 
