@@ -1,1 +1,5 @@
-adi-kat	(vaux)(vblex)
+root	(vaux)(vbser)(vblex)(preadv)(adj)(adv)(pr)
+nmod	(pr)(det|pos)(n)
+nsubj	(cnjcoo)(np|ant)
+rem	(prn|pers)(n)
+sn	(cnjcoo)(pr)(det|pos)(adj)(n)
