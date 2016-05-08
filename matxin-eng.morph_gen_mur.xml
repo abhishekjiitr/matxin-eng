@@ -23485,6 +23485,7 @@ La problemo estas ekz:  get up  -> vekigxi<itr>   ;   get him up -> veki lin
 <e lm="Sidanelia">       <i>Sidanelia</i><par n="Mary__np"/></e>
 <e lm="side">            <i>side</i><par n="expensive__adj"/></e>
 <e lm="side">            <i>side</i><par n="house__n"/></e>
+<e lm="underside">       <i>underside</i><par n="house__n"/></e>
 <e lm="side-effect">     <i>side-effect</i><par n="house__n"/></e>
 <e lm="sideboard">       <i>sideboard</i><par n="house__n"/></e>
 <e lm="sidecar">         <i>sidecar</i><par n="house__n"/></e>

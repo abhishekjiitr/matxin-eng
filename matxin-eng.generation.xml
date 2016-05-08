@@ -2,6 +2,8 @@
 
 <rule comment="">
 
+   <template match="//CHUNK[NODE[not(@lem)]]"/>
+
    <template match="NODE[contains(@pos,'det')][@num]">
       <copy>
        <copy-of select="@*[name()!='mi']"/>
