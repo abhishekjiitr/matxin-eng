@@ -118,6 +118,14 @@
       </copy>
    </template>
 
+   <template match="NODE[@pos='vblex'][@tam='pri'][@pers!='p3' or not(@pers)]">
+      <copy>
+       <copy-of select="@*[name()!='mi']"/>
+       <attribute name="mi"><value-of select="concat(@pos, '|', 'pri')" /></attribute>
+       <apply-templates select="@*[name()!='mi'] | *"/>
+      </copy>
+   </template>
+
    <template match="NODE[@pos='vblex'][@tam='imp']">
       <copy>
        <copy-of select="@*[name()!='mi']"/>
