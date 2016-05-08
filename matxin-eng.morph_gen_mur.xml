@@ -691,6 +691,10 @@
 </pardef>
 
 
+<pardef n="what__det">
+  <e>       <p><l></l>          <r>|det|itg</r></p><par n="sp0"/></e>
+</pardef>
+
 <pardef n="what__prn">
   <e>       <p><l></l>          <r>|prn|itg</r></p><par n="sp0"/></e>
 </pardef>
@@ -2668,6 +2672,9 @@ I can switch <subs> on and off in a ger_subs paradigm?
 
 <pardef n="separa">
   <e><re>[.\?;:!]+</re>      <p>        <l></l>        <r>|sent</r></p></e>
+  <e r="RL"><p><l>"</l><r>"<s n="sent"/></r></p></e>
+  <e r="RL"><p><l>"</l><r>&#34;<s n="sent"/></r></p></e>
+  <e r="RL"><p><l>"</l><r>&amp;#34;<s n="sent"/></r></p></e>
 </pardef>
 <pardef n="separ">
   <e>      <re>[¿¡]</re>      <p>        <l></l>        <r>|lquest</r></p></e>
@@ -3122,8 +3129,8 @@ I can switch <subs> on and off in a ger_subs paradigm?
 <e lm="go back">         <i></i><par n="/go__vblex"/><p><l><b/>back</l><r><g><b/>back</g></r></p></e>
 <e lm="be hungry">       <i></i><par n="/be__vblex"/><p><l><b/>hungry</l><r><g><b/>hungry</g></r></p></e>
 
-<e lm="years old">       <p><l>years<b/>old</l><r>year<b/>old<s n="n"/><s n="pl"/></r></p></e>
-<e lm="year old">       <p><l>year<b/>old</l><r>year<b/>old<s n="n"/><s n="sg"/></r></p></e>
+<e lm="years old">       <p><l>years<b/>old</l><r>year<b/>old|n|pl</r></p></e>
+<e lm="year old">       <p><l>year<b/>old</l><r>year<b/>old|n|sg</r></p></e>
 <e lm="a bit">           <i>a<b/>bit</i><par n="maybe__adv"/></e>
 <e lm="a little bit">    <i>a<b/>little<b/>bit</i><par n="maybe__adv"/></e>
 <e lm="a lot">           <i>a<b/>lot</i><par n="maybe__adv"/></e>
@@ -27958,9 +27965,9 @@ La problemo estas ekz:  get up  -> vekigxi<itr>   ;   get him up -> veki lin
 <e lm="someone">         <i>someone</i><par n="everyone__prn"/></e>
 <e lm="something">       <i>something</i><par n="everyone__prn"/></e>
 <e lm="somewhere">       <i>somewhere</i><par n="everyone__prn"/></e>
-<!--    <e lm="what"><i>what</i><par n="what__det"/></e> -->
+<e lm="what"><i>what</i><par n="what__det"/></e> 
 <e lm="what">            <i>what</i><par n="what__prn"/></e>
-<!--    <e lm="which"><i>which</i><par n="what__det"/></e> -->
+<e lm="which"><i>which</i><par n="what__det"/></e> 
 <e lm="which">           <i>which</i><par n="what__prn"/></e>
 <e lm="which one">       <i>which<b/>one</i><par n="which_one__prn"/></e>
 <e lm="who">             <i>who</i><par n="what__prn"/></e>

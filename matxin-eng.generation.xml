@@ -20,6 +20,27 @@
       </copy>
    </template>
 
+
+   <template match="NODE[@pos='prn|dem' or @pos='prn|itg'][@num]">
+      <copy>
+       <copy-of select="@*[name()!='mi']"/>
+       <attribute name="mi"><value-of select="concat(@pos, '|', @num)" /></attribute>
+       <apply-templates select="@*[name()!='mi'] | *"/>
+
+      </copy>
+   </template>
+
+
+   <template match="NODE[@pos='prn|tn'][@num]">
+      <copy>
+       <copy-of select="@*[name()!='mi']"/>
+       <attribute name="mi"><value-of select="concat(@pos, '|', @num)" /></attribute>
+       <apply-templates select="@*[name()!='mi'] | *"/>
+
+      </copy>
+   </template>
+
+
    <template match="NODE[@pos='prn|pers'][@pos][@pers][@gen][@num][@cas]">
       <copy>
        <copy-of select="@*[name()!='mi']"/>
@@ -58,6 +79,16 @@
       </copy>
    </template>
 
+   <template match="NODE[@pos='vblex'][@tam='pri'][@pers='p3'][@num='pl']">
+      <copy>
+       <copy-of select="@*[name()!='mi']"/>
+       <attribute name="mi"><value-of select="concat(@pos, '|', @tam)" /></attribute>
+       <apply-templates select="@*[name()!='mi'] | *"/>
+
+      </copy>
+   </template>
+
+
    <template match="NODE[@pos='vbser'][@tam='pri' or @tam='past'][@pers='p3'][@num='sg']">
       <copy>
        <copy-of select="@*[name()!='mi']"/>
@@ -85,7 +116,7 @@
       </copy>
    </template>
 
-   <template match="NODE[@pos='vblex'][@mi='ger']">
+   <template match="NODE[@pos='vblex'][@mi='ger' or @mi='inf']">
       <copy>
        <copy-of select="@*[name()!='mi']"/>
        <attribute name="mi"><value-of select="concat(@pos, '|', @mi)" /></attribute>
