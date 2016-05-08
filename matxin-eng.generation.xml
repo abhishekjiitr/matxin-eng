@@ -13,7 +13,7 @@
       </copy>
    </template>
 
-   <template match="NODE[@pos='n'][@pos][@num]">
+   <template match="NODE[@pos='n' or @pos='num'][@pos][@num]">
       <copy>
        <copy-of select="@*[name()!='mi']"/>
        <attribute name="mi"><value-of select="concat(@pos, '|', @num)" /></attribute>
@@ -118,6 +118,15 @@
       </copy>
    </template>
 
+   <template match="NODE[@pos='vblex'][@tam='past']">
+      <copy>
+       <copy-of select="@*[name()!='mi']"/>
+       <attribute name="mi"><value-of select="concat(@pos, '|', @tam)" /></attribute>
+       <apply-templates select="@*[name()!='mi'] | *"/>
+
+      </copy>
+   </template>
+
    <template match="NODE[@pos='vblex'][@mi='ger' or @mi='inf']">
       <copy>
        <copy-of select="@*[name()!='mi']"/>
@@ -144,7 +153,7 @@
       </copy>
    </template>
 
-   <template match="NODE[@pos='pr' or @pos='cnjcoo' or @pos='sent' or @pos='cm' or @pos='gen' or @pos='preadv' or @pos='cnjadv']">
+   <template match="NODE[@pos='ij' or @pos='to' or @pos='pr' or @pos='cnjcoo' or @pos='sent' or @pos='cm' or @pos='gen' or @pos='preadv' or @pos='cnjadv']">
       <copy>
        <copy-of select="@*[name()!='mi']"/>
        <attribute name="mi"><value-of select="@pos" /></attribute>

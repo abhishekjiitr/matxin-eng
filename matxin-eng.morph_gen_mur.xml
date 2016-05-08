@@ -18575,6 +18575,7 @@ La problemo estas ekz:  get up  -> vekigxi<itr>   ;   get him up -> veki lin
 <e lm="Nive">            <i>Nive</i><par n="Mary__np"/></e>
 <e lm="Niza">            <i>Niza</i><par n="Mary__np"/></e>
 <e lm="no">              <i>no</i><par n="maybe__adv"/></e>
+<e lm="no">              <i>no</i><par n="hello__ij"/></e>
 <e lm="no" c="he got a 'no'"><par n="TAGGER_TODO"/><i>no</i><par n="east__n"/></e>
 <e lm="no good">         <i>no<b/>good</i><par n="house__n"/></e>
 <e lm="no sooner">       <i>no<b/>sooner</i><par n="maybe__adv"/></e>
@@ -29190,7 +29191,7 @@ TODO: aldonu kaj retrejnu la tagger
 <e lm="World War II">    <i>World<b/>War<b/>II</i><par n="east__n"/></e>
 <e lm="subregion">       <i>subregion</i><par n="house__n"/></e>
 
-
+<e><p><l>to</l><r>to|to</r></p></e>
 
   </section>
 
