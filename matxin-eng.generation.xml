@@ -72,7 +72,7 @@
    </template>
 
 
-   <template match="NODE[@pos='vblex'][@tam='pri'][@pers='p3'][@num='sg']">
+   <template match="NODE[@pos='vblex' or @pos='vbdo'][@tam='pri'][@pers='p3'][@num='sg']">
       <copy>
        <copy-of select="@*[name()!='mi']"/>
        <attribute name="mi"><value-of select="concat(@pos, '|', @tam, '|', @pers, '|', @num)" /></attribute>
@@ -118,7 +118,7 @@
       </copy>
    </template>
 
-   <template match="NODE[@pos='vblex'][@tam='pri'][@pers!='p3' or not(@pers)]">
+   <template match="NODE[@pos='vblex' or @pos='vbdo'][@tam='pri'][@pers!='p3' or not(@pers)]">
       <copy>
        <copy-of select="@*[name()!='mi']"/>
        <attribute name="mi"><value-of select="concat(@pos, '|', 'pri')" /></attribute>
@@ -135,7 +135,7 @@
    </template>
 
 
-   <template match="NODE[@pos='vblex'][@tam='past']">
+   <template match="NODE[@pos='vblex' or @pos='vbdo'][@tam='past']">
       <copy>
        <copy-of select="@*[name()!='mi']"/>
        <attribute name="mi"><value-of select="concat(@pos, '|', @tam)" /></attribute>
