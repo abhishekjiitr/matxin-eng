@@ -3,8 +3,14 @@
 
 #libxom-java
 
-all: stanford-corenlp-2012-04-09.jar
+all: stanford-corenlp-2012-04-09.jar  StanfordAnalyzer.class ChunkRule.class
 	javac -cp stanford-corenlp-2012-04-09.jar StanfordAnalyzer.java ChunkRule.java
+
+StanfordAnalyzer.class: stanford-corenlp-2012-04-09.jar ChunkRule.class
+	javac -cp stanford-corenlp-2012-04-09.jar StanfordAnalyzer.java ChunkRule.java
+
+ChunkRule.class: stanford-corenlp-2012-04-09.jar 
+	javac -cp stanford-corenlp-2012-04-09.jar ChunkRule.java
 
 matxinengdir=$(prefix)/share/matxin/matxin-eng/matxin
 
