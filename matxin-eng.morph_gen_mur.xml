@@ -2672,9 +2672,11 @@ I can switch <subs> on and off in a ger_subs paradigm?
 
 <pardef n="separa">
   <e><re>[.\?;:!]+</re>      <p>        <l></l>        <r>|sent</r></p></e>
-  <e r="RL"><p><l>"</l><r>"|sent</r></p></e>
-  <e r="RL"><p><l>"</l><r>&#34;|sent</r></p></e>
-  <e r="RL"><p><l>"</l><r>&amp;#34;|sent</r></p></e>
+  <e r="RL"><p><l>&amp;quot;</l><r>"|sent</r></p></e>
+  <e r="RL"><p><l>&amp;quot;</l><r>&quot;|sent</r></p></e>
+  <e r="RL"><p><l>&amp;quot;</l><r>&amp;quot;|sent</r></p></e>
+  <e r="RL"><p><l>&amp;quot;</l><r>&#34;|sent</r></p></e>
+  <e r="RL"><p><l>&amp;quot;</l><r>&amp;#34;|sent</r></p></e>
 </pardef>
 <pardef n="separ">
   <e>      <re>[¿¡]</re>      <p>        <l></l>        <r>|lquest</r></p></e>
