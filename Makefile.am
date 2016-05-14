@@ -20,7 +20,7 @@ $(LANG1).autogen.bin: $(BASENAME).$(LANG1).dix
 	lt-comp rl $< $@
 
 $(LANG1).gnx.bin: $(BASENAME).$(LANG1).gnx
-	matxin-preprocess-transfer $< $@
+	matxin-preprocess-generate $< $@
 
 matxinengdir = $(prefix)/share/matxin/matxin-eng
 

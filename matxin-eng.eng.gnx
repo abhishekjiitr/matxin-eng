@@ -1,8 +1,8 @@
-<transfer>
+<generate>
 <def-rule>
   <template match="//NODE[@pos = 'vbser' and not(@pers = 'p3' and @num = 'sg')]">
     <copy>
-      <attribute name="mi"><value-of select="concat('|', @pos, '|', @tam)"/></attribute>
+      <attribute name="mi"><value-of select="concat(@pos, '|', @tam)"/></attribute>
       <copy-of select="@*[name()!='mi'] | *"/>
     </copy>
   </template>
@@ -11,7 +11,7 @@
 <def-rule>
    <template match="NODE[@pos='vblex' and @tam='imp']">
       <copy>
-       <attribute name="mi"><value-of select="concat('|', @pos, '|', 'inf')" /></attribute>
+       <attribute name="mi"><value-of select="concat(@pos, '|', 'inf')" /></attribute>
        <copy-of select="@*[name()!='mi']"/>
       </copy>
    </template>
@@ -20,7 +20,7 @@
 <def-rule>
    <template match="NODE[@pos='vblex' and (@mi='ger' or @mi='inf')]">
       <copy>
-       <attribute name="mi"><value-of select="concat('|', @pos, '|', @mi)" /></attribute>
+       <attribute name="mi"><value-of select="concat(@pos, '|', @mi)" /></attribute>
        <copy-of select="@*[name()!='mi']"/>
       </copy>
    </template>
@@ -30,7 +30,7 @@
 <def-rule>
   <template match="//NODE[@pos = 'vbser' and @pers = 'p3' and @num = 'sg']">
     <copy>
-      <attribute name="mi"><value-of select="concat('|', @pos, '|', @tam, '|', @pers, '|', @num)"/></attribute>
+      <attribute name="mi"><value-of select="concat(@pos, '|', @tam, '|', @pers, '|', @num)"/></attribute>
       <copy-of select="@*[name()!='mi'] | *"/>
     </copy>
   </template>
@@ -39,7 +39,7 @@
 <def-rule>
   <template match="//NODE[@pos = 'vaux' and not(@mi)]">
     <copy>
-      <attribute name="mi"><value-of select="concat('|', @pos, '|', @tam)"/></attribute>
+      <attribute name="mi"><value-of select="concat(@pos, '|', @tam)"/></attribute>
       <copy-of select="@*[name()!='mi'] | *"/>
     </copy>
   </template>
@@ -47,7 +47,7 @@
 <def-rule>
   <template match="//NODE[@pos = 'vbdo' and not(@mi)]">
     <copy>
-      <attribute name="mi"><value-of select="concat('|', @pos, '|', @tam)"/></attribute>
+      <attribute name="mi"><value-of select="concat(@pos, '|', @tam)"/></attribute>
       <copy-of select="@*[name()!='mi'] | *"/>
     </copy>
   </template>
@@ -55,7 +55,7 @@
 <def-rule>
   <template match="//NODE[@pos = 'vblex' and not(@mi)]">
     <copy>
-      <attribute name="mi"><value-of select="concat('|', @pos, '|', @tam)"/></attribute>
+      <attribute name="mi"><value-of select="concat(@pos, '|', @tam)"/></attribute>
       <copy-of select="@*[name()!='mi'] | *"/>
     </copy>
   </template>
@@ -63,7 +63,7 @@
 <def-rule>
   <template match="//NODE[@pos = 'vbmod' and not(@mi)]">
     <copy>
-      <attribute name="mi"><value-of select="concat('|', @pos, '|', @tam)"/></attribute>
+      <attribute name="mi"><value-of select="concat(@pos, '|', @tam)"/></attribute>
       <copy-of select="@*[name()!='mi'] | *"/>
     </copy>
   </template>
@@ -71,7 +71,7 @@
 <def-rule>
   <template match="//NODE[@pos = 'vbser' and not(@mi)]">
     <copy>
-      <attribute name="mi"><value-of select="concat('|', @pos, '|', @tam)"/></attribute>
+      <attribute name="mi"><value-of select="concat(@pos, '|', @tam)"/></attribute>
       <copy-of select="@*[name()!='mi'] | *"/>
     </copy>
   </template>
@@ -80,7 +80,7 @@
 <def-rule>
   <template match="//NODE[@pos = 'n']">
     <copy>
-      <attribute name="mi"><value-of select="concat('|', @pos, '|', @num)"/></attribute>
+      <attribute name="mi"><value-of select="concat(@pos, '|', @num)"/></attribute>
       <copy-of select="@*[name()!='mi'] | *"/>
     </copy>
   </template>
@@ -89,7 +89,7 @@
 <def-rule>
   <template match="//NODE[@pos = 'np|ant']">
     <copy>
-      <attribute name="mi"><value-of select="concat('|', @pos, '|', @gen, '|', @num)"/></attribute>
+      <attribute name="mi"><value-of select="concat(@pos, '|', @gen, '|', @num)"/></attribute>
       <copy-of select="@*[name()!='mi'] | *"/>
     </copy>
   </template>
@@ -98,7 +98,7 @@
 <def-rule>
   <template match="//NODE[@pos = 'adj|sint']">
     <copy>
-      <attribute name="mi"><value-of select="concat('|', @pos)"/></attribute>
+      <attribute name="mi"><value-of select="@pos"/></attribute>
       <copy-of select="@*[name()!='mi'] | *"/>
     </copy>
   </template>
@@ -107,7 +107,7 @@
 <def-rule>
   <template match="//NODE[@pos = 'det|dem']">
     <copy>
-      <attribute name="mi"><value-of select="concat('|', @pos, '|', @num)"/></attribute>
+      <attribute name="mi"><value-of select="concat(@pos, '|', @num)"/></attribute>
       <copy-of select="@*[name()!='mi'] | *"/>
     </copy>
   </template>
@@ -115,7 +115,7 @@
 <def-rule>
   <template match="//NODE[@pos = 'det|ind']">
     <copy>
-      <attribute name="mi"><value-of select="concat('|', @pos, '|', @num)"/></attribute>
+      <attribute name="mi"><value-of select="concat(@pos, '|', @num)"/></attribute>
       <copy-of select="@*[name()!='mi'] | *"/>
     </copy>
   </template>
@@ -123,7 +123,7 @@
 <def-rule>
   <template match="//NODE[@pos = 'det|itg']">
     <copy>
-      <attribute name="mi"><value-of select="concat('|', @pos, '|', @num)"/></attribute>
+      <attribute name="mi"><value-of select="concat(@pos, '|', @num)"/></attribute>
       <copy-of select="@*[name()!='mi'] | *"/>
     </copy>
   </template>
@@ -131,7 +131,7 @@
 <def-rule>
   <template match="//NODE[@pos = 'det|pos']">
     <copy>
-      <attribute name="mi"><value-of select="concat('|', @pos, '|', @num)"/></attribute>
+      <attribute name="mi"><value-of select="concat(@pos, '|', @num)"/></attribute>
       <copy-of select="@*[name()!='mi'] | *"/>
     </copy>
   </template>
@@ -140,7 +140,7 @@
 <def-rule>
   <template match="//NODE[@pos = 'num']">
     <copy>
-      <attribute name="mi"><value-of select="concat('|', @pos, '|', @num)"/></attribute>
+      <attribute name="mi"><value-of select="concat(@pos, '|', @num)"/></attribute>
       <copy-of select="@*[name()!='mi'] | *"/>
     </copy>
   </template>
@@ -149,7 +149,7 @@
 <def-rule>
   <template match="//NODE[@pos = 'predet']">
     <copy>
-      <attribute name="mi"><value-of select="concat('|', @pos, '|', @num)"/></attribute>
+      <attribute name="mi"><value-of select="concat(@pos, '|', @num)"/></attribute>
       <copy-of select="@*[name()!='mi'] | *"/>
     </copy>
   </template>
@@ -158,7 +158,7 @@
 <def-rule>
   <template match="//NODE[@pos = 'prn|dem']">
     <copy>
-      <attribute name="mi"><value-of select="concat('|', @pos, '|', @num)"/></attribute>
+      <attribute name="mi"><value-of select="concat(@pos, '|', @num)"/></attribute>
       <copy-of select="@*[name()!='mi'] | *"/>
     </copy>
   </template>
@@ -166,7 +166,7 @@
 <def-rule>
   <template match="//NODE[@pos = 'prn|itg']">
     <copy>
-      <attribute name="mi"><value-of select="concat('|', @pos, '|', @num)"/></attribute>
+      <attribute name="mi"><value-of select="concat(@pos, '|', @num)"/></attribute>
       <copy-of select="@*[name()!='mi'] | *"/>
     </copy>
   </template>
@@ -174,7 +174,7 @@
 <def-rule>
   <template match="//NODE[@pos = 'prn|pers']">
     <copy>
-      <attribute name="mi"><value-of select="concat('|', @pos, '|', @pers, '|', @gen, '|', @num, '|', @cas)"/></attribute>
+      <attribute name="mi"><value-of select="concat(@pos, '|', @pers, '|', @gen, '|', @num, '|', @cas)"/></attribute>
       <copy-of select="@*[name()!='mi'] | *"/>
     </copy>
   </template>
@@ -182,7 +182,7 @@
 <def-rule>
   <template match="//NODE[@pos = 'prn|tn']">
     <copy>
-      <attribute name="mi"><value-of select="concat('|', @pos, '|', @num)"/></attribute>
+      <attribute name="mi"><value-of select="concat(@pos, '|', @num)"/></attribute>
       <copy-of select="@*[name()!='mi'] | *"/>
     </copy>
   </template>
@@ -193,7 +193,7 @@
 <def-rule>
   <template match="//NODE[@pos = 'to']">
     <copy>
-      <attribute name="mi"><value-of select="concat('|', @pos)"/></attribute>
+      <attribute name="mi"><value-of select="@pos"/></attribute>
       <copy-of select="@*[name()!='mi'] | *"/>
     </copy>
   </template>
@@ -203,7 +203,7 @@
 <def-rule>
   <template match="//NODE[@pos = 'cm']">
     <copy>
-      <attribute name="mi"><value-of select="concat('|', @pos)"/></attribute>
+      <attribute name="mi"><value-of select="@pos"/></attribute>
       <copy-of select="@*[name()!='mi'] | *"/>
     </copy>
   </template>
@@ -212,7 +212,7 @@
 <def-rule>
   <template match="//NODE[@pos = 'sent']">
     <copy>
-      <attribute name="mi"><value-of select="concat('|', @pos)"/></attribute>
+      <attribute name="mi"><value-of select="@pos"/></attribute>
       <copy-of select="@*[name()!='mi'] | *"/>
     </copy>
   </template>
@@ -221,7 +221,7 @@
 <def-rule>
   <template match="//NODE[@pos = 'cnjadv']">
     <copy>
-      <attribute name="mi"><value-of select="concat('|', @pos)"/></attribute>
+      <attribute name="mi"><value-of select="@pos"/></attribute>
       <copy-of select="@*[name()!='mi'] | *"/>
     </copy>
   </template>
@@ -229,7 +229,7 @@
 <def-rule>
   <template match="//NODE[@pos = 'cnjcoo']">
     <copy>
-      <attribute name="mi"><value-of select="concat('|', @pos)"/></attribute>
+      <attribute name="mi"><value-of select="@pos"/></attribute>
       <copy-of select="@*[name()!='mi'] | *"/>
     </copy>
   </template>
@@ -238,7 +238,7 @@
 <def-rule>
   <template match="//NODE[@pos = 'adj']">
     <copy>
-      <attribute name="mi"><value-of select="concat('|', @pos)"/></attribute>
+      <attribute name="mi"><value-of select="@pos"/></attribute>
       <copy-of select="@*[name()!='mi'] | *"/>
     </copy>
   </template>
@@ -247,7 +247,7 @@
 <def-rule>
   <template match="//NODE[@pos = 'adv']">
     <copy>
-      <attribute name="mi"><value-of select="concat('|', @pos)"/></attribute>
+      <attribute name="mi"><value-of select="@pos"/></attribute>
       <copy-of select="@*[name()!='mi'] | *"/>
     </copy>
   </template>
@@ -255,7 +255,7 @@
 <def-rule>
   <template match="//NODE[@pos = 'adv|itg']">
     <copy>
-      <attribute name="mi"><value-of select="concat('|', @pos)"/></attribute>
+      <attribute name="mi"><value-of select="@pos"/></attribute>
       <copy-of select="@*[name()!='mi'] | *"/>
     </copy>
   </template>
@@ -264,7 +264,7 @@
 <def-rule>
   <template match="//NODE[@pos = 'ij']">
     <copy>
-      <attribute name="mi"><value-of select="concat('|', @pos)"/></attribute>
+      <attribute name="mi"><value-of select="@pos"/></attribute>
       <copy-of select="@*[name()!='mi'] | *"/>
     </copy>
   </template>
@@ -274,7 +274,7 @@
 <def-rule>
   <template match="//NODE[@pos = 'pr']">
     <copy>
-      <attribute name="mi"><value-of select="concat('|', @pos)"/></attribute>
+      <attribute name="mi"><value-of select="@pos"/></attribute>
       <copy-of select="@*[name()!='mi'] | *"/>
     </copy>
   </template>
@@ -282,11 +282,11 @@
 <def-rule>
   <template match="//NODE[@pos = 'preadv']">
     <copy>
-      <attribute name="mi"><value-of select="concat('|', @pos)"/></attribute>
+      <attribute name="mi"><value-of select="@pos"/></attribute>
       <copy-of select="@*[name()!='mi'] | *"/>
     </copy>
   </template>
 </def-rule>
 
 
-</transfer>
+</generate>
