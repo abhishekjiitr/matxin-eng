@@ -5,35 +5,26 @@ BASENAME=matxin-eng
 
 SUBDIRS = stanford
 
-TARGETS_COMMON=$(LANG1).morph_gen.bin \
-	       $(LANG1).intrachunk_order.dat \
-	       $(LANG1).generation.bin \
-	       $(LANG1).chunk_rules.dat 
+TARGETS_COMMON=$(LANG1).autogen.bin \
+	       $(LANG1).gnx.bin
 
 #
 #	ANALYSIS
 #
 
-$(LANG1).chunk_rules.dat: $(BASENAME).chunk_rules.dat
-	cp $< $@
-
 #
 #	GENERATION
 #
 
-$(LANG1).morph_gen.bin: $(BASENAME).morph_gen_mur.xml 
+$(LANG1).autogen.bin: $(BASENAME).$(LANG1).dix
 	lt-comp rl $< $@
 
-$(LANG1).generation.bin: $(BASENAME).generation.xml 
+$(LANG1).gnx.bin: $(BASENAME).$(LANG1).gnx
 	matxin-preprocess-transfer $< $@
-
-$(LANG1).intrachunk_order.dat: $(BASENAME).intrachunk_order.dat
-	cp $< $@
-
 
 matxinengdir = $(prefix)/share/matxin/matxin-eng
 
-matxineng_DATA = $(TARGETS_COMMON) matxin-eng.semantic.dat
+matxineng_DATA = $(TARGETS_COMMON) 
 
 EXTRA_DIST = modes.xml
 
