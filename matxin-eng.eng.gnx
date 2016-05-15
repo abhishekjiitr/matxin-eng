@@ -1,4 +1,5 @@
 <generate>
+
 <def-rule>
   <template match="//NODE[@pos = 'vbser' and not(@pers = 'p3' and @num = 'sg')]">
     <copy>
@@ -9,7 +10,7 @@
 </def-rule>
 
 <def-rule>
-   <template match="NODE[@pos='vblex' and @tam='imp']">
+   <template match="//NODE[@pos='vblex' and @tam='imp']">
       <copy>
        <attribute name="mi"><value-of select="concat(@pos, '|', 'inf')" /></attribute>
        <copy-of select="@*[name()!='mi']"/>
@@ -18,7 +19,7 @@
 </def-rule>
 
 <def-rule>
-   <template match="NODE[@pos='vblex' and (@mi='ger' or @mi='inf')]">
+   <template match="//NODE[@pos='vblex' and (@mi='ger' or @mi='inf')]">
       <copy>
        <attribute name="mi"><value-of select="concat(@pos, '|', @mi)" /></attribute>
        <copy-of select="@*[name()!='mi']"/>
@@ -270,7 +271,6 @@
   </template>
 </def-rule>
 
-
 <def-rule>
   <template match="//NODE[@pos = 'pr']">
     <copy>
@@ -279,6 +279,7 @@
     </copy>
   </template>
 </def-rule>
+
 <def-rule>
   <template match="//NODE[@pos = 'preadv']">
     <copy>
