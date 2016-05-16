@@ -2946,6 +2946,7 @@ I can switch <subs> on and off in a ger_subs paradigm?
 <e lm="offensive">       <i>offensive</i><par n="house__n"/></e>
 <e lm="operation">       <i>operation</i><par n="house__n"/></e>
 <e lm="land">            <i>land</i><par n="house__n"/></e>
+<e lm="grassland">       <i>grassland</i><par n="house__n"/></e>
 <e lm="leader">          <i>leader</i><par n="house__n"/></e>
 <e lm="border">          <i>border</i><par n="house__n"/></e>
 <e lm="alliance">        <i>alliance</i><par n="house__n"/></e>
@@ -11105,6 +11106,8 @@ I can switch <subs> on and off in a ger_subs paradigm?
 <e lm="exist">           <i>exist</i><par n="accept__vblex"/></e>
 <e lm="existence">       <i>existence</i><par n="house__n"/></e>
 <e lm="existent">        <i>existent</i><par n="expensive__adj"/></e>
+<e lm="inexistent">      <i>inexistent</i><par n="expensive__adj"/></e>
+<e lm="non-existent">    <i>non-existent</i><par n="expensive__adj"/></e>
 <e lm="existential">     <i>existential</i><par n="expensive__adj"/></e>
 <e lm="existentialism">  <i>existentialism</i><par n="house__n"/></e>
 <e lm="existentialist">  <i>existentialist</i><par n="up__n"/></e>
