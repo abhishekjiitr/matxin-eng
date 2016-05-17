@@ -19,6 +19,15 @@
 </def-rule>
 
 <def-rule>
+   <template match="//NODE[@pos='vblex' and @mi='pp']">
+      <copy>
+       <attribute name="mi"><value-of select="concat(@pos, '|', @mi)" /></attribute>
+       <apply-templates select="@*[name()!='mi'] | *"/>
+      </copy>
+   </template>
+</def-rule>
+
+<def-rule>
    <template match="//NODE[@pos='vblex' and @mi='ger']">
       <copy>
        <attribute name="mi"><value-of select="concat(@pos, '|', @mi)" /></attribute>
