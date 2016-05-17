@@ -24,7 +24,7 @@ $(LANG1).gnx.bin: $(BASENAME).$(LANG1).gnx
 
 matxinengdir = $(prefix)/share/matxin/matxin-eng
 
-matxineng_DATA = $(TARGETS_COMMON) 
+matxineng_DATA = $(TARGETS_COMMON) matxin-eng.chunk_rules.dat
 
 EXTRA_DIST = modes.xml
 
