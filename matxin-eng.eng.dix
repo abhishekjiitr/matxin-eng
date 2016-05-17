@@ -284,6 +284,21 @@
   <e>       <p><l></l>          <r>|pis</r></p></e>
 </pardef>
 
+<pardef n="/be__vblex">
+  <e>       <p><l>be</l>        <r>be<s n="mi"/>vblex|inf</r></p></e>
+  <e>       <p><l>am</l>        <r>be<s n="mi"/>vblex|pri|p1|sg</r></p></e>
+  <e r="LR"><p><l>art</l>       <r>be<s n="mi"/>vblex|pri|p2|sg</r></p></e>
+  <e>       <p><l>are</l>       <r>be<s n="mi"/>vblex|pri</r></p></e>
+  <e>       <p><l>is</l>        <r>be<s n="mi"/>vblex|pri|p3|sg</r></p></e>
+  <e>       <p><l>be</l>        <r>be<s n="mi"/>vblex|prs</r></p></e>
+  <e>       <p><l>was</l>       <r>be<s n="mi"/>vblex|past|p1|sg</r></p></e>
+  <e>       <p><l>were</l>      <r>be<s n="mi"/>vblex</r></p><par n="S__accepted/"/></e>
+  <e>       <p><l>was</l>       <r>be<s n="mi"/>vblex|past|p3|sg</r></p></e>
+  <e>       <p><l>being</l>     <r>be<s n="mi"/>vblex</r></p><par n="S__being/"/></e>
+  <e>       <p><l>been</l>      <r>be<s n="mi"/>vblex|pp</r></p></e>
+  <e>       <p><l>be</l>        <r>be<s n="mi"/>vblex|imp</r></p></e>
+</pardef> 
+
 <pardef n="/be__vbser">
   <e>       <p><l>be</l>        <r>be<s n="mi"/>vbser|inf</r></p></e>
   <e>       <p><l>am</l>        <r>be<s n="mi"/>vbser|pri|p1|sg</r></p></e>
@@ -3099,6 +3114,7 @@ I can switch <subs> on and off in a ger_subs paradigm?
     <!-- SECTION: Verbs -->
 
 <e lm="be">              <i></i><par n="/be__vbser"/></e>
+<e lm="be">              <i></i><par n="/be__vblex"/></e>
 
 <e lm="accept">          <i>accept</i><par n="accept__vblex"/></e>
 <e lm="travel">          <i>travel</i><par n="travel__vblex"/></e>
@@ -28540,7 +28556,7 @@ TODO: aldonu kaj retrejnu la tagger
 <e lm="would" c="volus"> <i>would</i><p><l></l><r><s n="mi"/>vaux|cni</r></p></e>
 
 <e lm="might" c="eblas"> <i>might</i><p><l></l><r><s n="mi"/>vaux|pri</r></p></e>
-<e lm="must">            <i>must</i><p><l></l><r><s n="mi"/>vaux|inf</r></p></e>
+<e lm="must">            <i>must</i><p><l></l><r><s n="mi"/>vaux|pri</r></p></e>
 <e lm="shall">           <i>shall</i><p><l></l><r><s n="mi"/>vaux|pri</r></p></e>
 <e lm="will" c="volas">  <i>will</i><p><l></l><r><s n="mi"/>vaux|pri</r></p></e>
 
@@ -28576,7 +28592,6 @@ TODO: aldonu kaj retrejnu la tagger
     <!-- ******************************
           group vbser
       ****************************** -->
-<e lm="be">              <par n="/be__vbser"/></e>
 <e lm="be descended">    <i></i><par n="/be__vbser"/><p><l><b/>descended</l><r><g><b/>descended</g></r></p></e>
 <e r="LR" lm="not be descended"><i></i><par n="/be__vbser"/><p><l><b/>not<b/>descended</l><r><g><b/>not<b/>descended</g></r></p></e>
 <e lm="be over">         <i></i><par n="/be__vbser"/><p><l><b/>over</l><r><g><b/>over</g></r></p></e>
