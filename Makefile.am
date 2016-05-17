@@ -13,7 +13,7 @@ TARGETS_COMMON=$(LANG1).autogen.bin \
 #	ANALYSIS
 #
 
-$(LANG1).chunk_rules.dat: $(BASENAME.chunk_rules.dat
+$(LANG1).chunk_rules.dat: $(BASENAME).chunk_rules.dat
 	cp $< $@
 
 #
